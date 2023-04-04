@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page 11</title>
+  </head>
+  <body>
+    <h1>Welcome to Page 11</h1>
+    <p>The current counter value is: <span id="counter">0</span></p>
+
+    <script>
+      const counterElem = document.getElementById('counter');
+
+      // Retrieve the counter value from localStorage and display it
+      const counterValue = parseInt(localStorage.getItem('counterValue')) || 0;
+      counterElem.textContent = counterValue;
+    </script>
+  </body>
+</html>

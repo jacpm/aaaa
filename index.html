@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter Example</title>
+  </head>
+  <body>
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button id="increment-btn">Increment Counter</button>
+
+    <script>
+      const counterElem = document.getElementById('counter');
+      const incrementBtn = document.getElementById('increment-btn');
+
+      // Check if the counter value is already stored in localStorage
+      let counterValue = parseInt(localStorage.getItem('counterValue')) || 0;
+      counterElem.textContent = counterValue;
+
+      incrementBtn.addEventListener('click', () => {
+        counterValue++;
+        localStorage.setItem('counterValue', counterValue.toString());
+        window.location.href = 'page-11.html';
+      });
+    </script>
+  </body>
+</html>
